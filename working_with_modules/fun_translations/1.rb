@@ -1,4 +1,4 @@
-require 'fun_tanslations'
+require 'fun_translations'
 
 client = FunTranslations.client
 result = client.translate(:pirate, 'Hello sir!')
