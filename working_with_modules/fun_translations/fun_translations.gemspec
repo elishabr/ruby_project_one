@@ -14,11 +14,10 @@ Gem::Specification.new do |spec|
   spec.platform = Gem::Platform::RUBY
   spec.required_ruby_version = '>= 2.7.0' # rubocop:disable Gemspec/RequiredRubyVersion
 
-  spec.files = Dir['README.md', 'LICENSE',
-                   'CHANGELOG.md', 'lib/**/*.rb',
-                   'fun_translations.gemspec', '.github/*.md',
-                   'Gemfile', 'Rakefile']
-  spec.extra_rdoc_files = ['README.md']
+  spec.files = Dir[ 'lib/**/*.rb',
+                    'fun_translations.gemspec',
+                    'Rakefile']
+  # spec.extra_rdoc_files = ['README.md']
   spec.require_paths = ['lib']
 
   spec.add_dependency 'faraday', '~> 2.6'
@@ -28,3 +27,12 @@ Gem::Specification.new do |spec|
     'rubygems_mfa_reguired' => 'true'
   }
 end
+
+# для сборки
+# gem build fun_translations.gemspec
+
+# для удаления
+# gem uninstall fun_translations
+
+# для локальной установки
+# gem install fun_translations-0.0.1.gem

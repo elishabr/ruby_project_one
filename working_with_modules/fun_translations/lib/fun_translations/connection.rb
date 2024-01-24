@@ -10,11 +10,13 @@ module FunTranslations
         faraday.request :url_encoded
       end
     end
+
     private
+
     def options
       headers = {
-        accept: 'aplication/json',
-        'Content-Type' => 'application/x-www-from-urlencoded',
+        accept: 'application/json',
+        'Content-Type' => 'application/x-www-form-urlencoded',
         user_agent: "fun_translations gem/#{FunTranslations::VERSION}"
       }
 
